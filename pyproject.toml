@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "autonomy-log-triage"
+version = "0.1.0"
+description = "Deterministic triage for synthetic robot autonomy event logs"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Parth Oza"}]
+keywords = ["robotics", "autonomy", "observability", "ros2", "diagnostics"]
+
+[project.scripts]
+autonomy-triage = "autonomy_log_triage.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+

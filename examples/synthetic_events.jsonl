@@ -1,0 +1,9 @@
+{"timestamp":"2026-01-01T12:00:00Z","robot_id":"robot-07","event":"mission_started","details":{"mission":"demo-101"}}
+{"timestamp":"2026-01-01T12:00:05Z","robot_id":"robot-07","event":"localization_ok","details":{"quality":0.94}}
+{"timestamp":"2026-01-01T12:00:12Z","robot_id":"robot-07","event":"planning_stall","details":{"planner":"grid","duration_ms":840}}
+{"timestamp":"2026-01-01T12:00:18Z","robot_id":"robot-07","event":"recovery_started","details":{"behavior":"clear_costmap"}}
+{"timestamp":"2026-01-01T12:00:24Z","robot_id":"robot-07","event":"mission_resumed","details":{}}
+{"timestamp":"2026-01-01T12:00:00Z","robot_id":"robot-12","event":"mission_started","details":{"mission":"demo-202"}}
+{"timestamp":"2026-01-01T12:00:04Z","robot_id":"robot-12","event":"communication_drop","details":{"channel":"telemetry"}}
+{"timestamp":"2026-01-01T12:00:42Z","robot_id":"robot-12","event":"communication_restored","details":{"channel":"telemetry"}}
+
