@@ -86,3 +86,7 @@ docs/ARCHITECTURE.md                 Design boundaries and extension points
 - Keep proprietary integrations outside the public analysis core.
 
 See [Architecture](docs/ARCHITECTURE.md), [Contributing](CONTRIBUTING.md), and [Security](SECURITY.md).
+
+## Contact
+
+For professional opportunities and technical discussions: [ozaparthu055@gmail.com](mailto:ozaparthu055@gmail.com) · [Portfolio](https://parthoza.net) · [LinkedIn](https://www.linkedin.com/in/oza-parth)
