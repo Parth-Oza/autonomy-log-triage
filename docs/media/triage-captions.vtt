@@ -1,0 +1,61 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:12.000
+This project converts noisy robot telemetry into validated and prioritized evidence for autonomy engineers.
+
+00:00:12.000 --> 00:00:24.000
+The acceptance criteria require validation, ordering, severity, heartbeat-gap detection, and stable output.
+
+00:00:24.000 --> 00:00:36.000
+C++20 handles ingestion, JSON Lines carries events, Python analyzes them, and CI verifies the result.
+
+00:00:36.000 --> 00:00:48.000
+Every event carries a timestamp, robot identifier, event name, and details object.
+
+00:00:48.000 --> 00:01:00.000
+The adapter uses C++20 and standard output so it can connect to files, pipes, queues, and services.
+
+00:01:00.000 --> 00:01:12.000
+JSON Lines is streamable, inspectable, and easy to partition by robot and time.
+
+00:01:12.000 --> 00:01:24.000
+The parser validates JSON, timestamps, identifiers, event names, and details while preserving line numbers.
+
+00:01:24.000 --> 00:01:36.000
+Sorting by robot and timestamp ensures that input arrival order cannot change the report.
+
+00:01:36.000 --> 00:01:48.000
+Recovery failure is critical; communication and localization failures are high; planning and battery conditions are medium.
+
+00:01:48.000 --> 00:02:00.000
+Adjacent timestamps are compared inside each robot timeline, and gaps above 30 seconds become findings.
+
+00:02:00.000 --> 00:02:12.000
+Robot 07 has gaps of 12, 35, and 32 seconds, so the last two are detected.
+
+00:02:12.000 --> 00:02:24.000
+ROS 2 or MCAP data enters through an adapter while validation, reporting, dashboards, and CI remain independent.
+
+00:02:24.000 --> 00:02:36.000
+The C++ adapter emits normalized events and the Python analyzer returns deterministic JSON evidence.
+
+00:02:36.000 --> 00:02:48.000
+The demonstration processes eight synthetic events from three robots, finding five incidents and two gaps.
+
+00:02:48.000 --> 00:03:00.000
+The critical recovery failure for robot 12 appears first with three failed attempts.
+
+00:03:00.000 --> 00:03:12.000
+A unit test independently verifies incident counting and a 42-second heartbeat-gap calculation.
+
+00:03:12.000 --> 00:03:24.000
+The production design adds robot partitioning, bounded event-time windows, efficient archives, and ingestion metrics.
+
+00:03:24.000 --> 00:03:36.000
+A future temporal graph will connect localization, planning, recovery, and communication symptoms to their evidence.
+
+00:03:36.000 --> 00:03:48.000
+Next steps include ROS 2 and MCAP adapters, containers, queues, replay tests, fault injection, controls, and dashboards.
+
+00:03:48.000 --> 00:04:00.000
+The core demonstrates cross-language ingestion, deterministic analysis, and transparent calculations.

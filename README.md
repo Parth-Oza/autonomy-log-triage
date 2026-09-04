@@ -8,6 +8,12 @@ A deterministic Python reference for turning robot event streams into incident-f
 
 > All events are synthetic. This independent portfolio project is not affiliated with any employer and contains no employer code, schemas, maps, missions, facility details, or operational data.
 
+## Technical walkthrough
+
+[![Watch the autonomy-diagnostics walkthrough](docs/media/triage-cover.png)](docs/media/autonomy-diagnostics-walkthrough.mp4)
+
+The four-minute English walkthrough explains the event contract, validation path, deterministic ordering, incident rules, heartbeat-gap calculation, stable output, and production extension boundaries. See [Evidence](docs/EVIDENCE.md) for the exact verification record and limitations.
+
 ## Capabilities
 
 - Parses JSON Lines events into validated, typed records.
@@ -85,7 +91,7 @@ docs/ARCHITECTURE.md                 Design boundaries and extension points
 - Produce deterministic results suitable for CI and incident comparison.
 - Keep proprietary integrations outside the public analysis core.
 
-See [Architecture](docs/ARCHITECTURE.md), [Contributing](CONTRIBUTING.md), and [Security](SECURITY.md).
+See [Architecture](docs/ARCHITECTURE.md), [Evidence](docs/EVIDENCE.md), [Contributing](CONTRIBUTING.md), and [Security](SECURITY.md).
 
 ## Contact
 
