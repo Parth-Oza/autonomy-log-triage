@@ -8,6 +8,10 @@ version = "0.1.0"
 description = "Deterministic triage for synthetic robot autonomy event logs"
 readme = "README.md"
 requires-python = ">=3.10"
+dependencies = [
+  "mcap>=1.5,<2",
+  "mcap-ros2-support>=0.5.7,<0.6",
+]
 license = {text = "MIT"}
 authors = [{name = "Parth Oza"}]
 keywords = ["robotics", "autonomy", "observability", "ros2", "diagnostics"]
