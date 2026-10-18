@@ -23,7 +23,7 @@ The rules identify one critical recovery failure, two high-severity conditions, 
 
 ## Test record
 
-The test suite verifies isolated heartbeat arithmetic and locks the complete public synthetic scenario to the documented `8 / 3 / 5 / 2` summary.
+The test suite verifies isolated heartbeat arithmetic and locks the complete public synthetic scenario to the documented `8 / 3 / 5 / 2` summary. It also writes and reads a real ROS 2 CDR MCAP, verifies nanosecond metadata preservation and lazy iteration, and covers empty, malformed, and invalid-message recordings.
 
 Run:
 
@@ -33,4 +33,4 @@ python -m unittest discover -s tests -v
 
 ## Interpretation boundary
 
-This project demonstrates deterministic event analysis, not causal diagnosis. It does not yet ingest ROS 2 diagnostics or MCAP directly, correlate traces, estimate probabilistic confidence, or operate a live fleet dashboard. Those capabilities are defined as future work in the Autonomy Flight Recorder roadmap.
+This project demonstrates deterministic event analysis and MCAP transport ingestion, not causal diagnosis. It does not interpret arbitrary ROS 2 diagnostic schemas, correlate traces, estimate probabilistic confidence, or operate a live fleet dashboard. The MCAP adapter requires the documented event fields and preserves source metadata for later correlation.
